@@ -1,0 +1,28 @@
+body{
+
+}
+
+div{
+    width: 200px;
+    height: 100px;
+}
+
+.parent{
+    width: 80vw;
+    height: 70vh;
+    position: relative;
+    left: 100px;
+    border: 2px solid black;
+}
+
+.one{
+    background-color: aqua;
+}
+
+.two{
+    background-color: rgb(0, 255, 26);
+}
+
+.three{
+    background-color: rgb(255, 47, 0);
+}

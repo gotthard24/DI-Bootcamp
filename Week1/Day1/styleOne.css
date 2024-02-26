@@ -1,0 +1,50 @@
+.seventycat{
+    background-color: yellow;
+}
+
+.catsenses{
+    margin-left: 5%;
+}
+
+.catsenses h3{
+    text-decoration: underline;
+    font-weight: 600;
+}
+.mediatitle{
+    text-align: center;
+}
+
+.catimg{
+    display: flex;
+    justify-content: center;
+}
+#catimg{
+    border: solid 5px orange;
+    height: 200px;
+}
+
+.tablewrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tabletitle{
+    text-align: center;
+    border: 1px solid red;
+}
+
+.table *{
+    text-align: center;
+    border: 1px solid black;
+}
+
+.lionimg{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+#lionimg{
+    border: solid 5px orange;
+    height: 200px;
+}

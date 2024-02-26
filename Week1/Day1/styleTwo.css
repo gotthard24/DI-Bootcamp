@@ -1,0 +1,99 @@
+*{
+    margin: 0px;
+}
+
+body{
+    margin: 0px;
+    padding: 20px;
+}
+
+header{
+    background-color: #ddd;
+}
+
+nav{
+    height: 7.5vh;
+    padding: 0px;
+    display: flex;
+    margin: 0px 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.content{
+    width: 100%;
+    height: 500px;
+    background-color: blanchedalmond;
+    background-image: url(https://images.pexels.com/photos/1350197/pexels-photo-1350197.jpeg?auto=compress&cs=tinysrgb&w=400);
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    color: #fff;
+    font-size: 1.5vw;
+    margin-bottom: 20px;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search{
+    padding: 10px 20px;
+    margin-right: 20px;
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.search a{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: blue;
+    color: #fff;
+    text-decoration: none;
+}
+
+input[type="text"] {
+    border: none;
+    outline: none;
+    color:#00000088;
+}
+
+input[type="text"] :hover{
+    border: none;
+    outline: none;
+    color:#00000000;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card *{
+    margin: 5px;
+}
+
+.card img{
+    position: relative;
+    top: 20px;
+    scale: 0.5;
+}
+
+footer{
+    padding-bottom: 20px;
+    background-color: #dddddd;
+}

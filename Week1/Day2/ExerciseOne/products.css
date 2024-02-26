@@ -64,3 +64,17 @@
     text-decoration: none;
     text-transform: uppercase;
 }
+
+@media only screen and (min-width: 1400px){
+    .content{
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1080px){
+    .prod_img{
+        width: 150px;
+        margin: 15px 3px;
+    }
+}

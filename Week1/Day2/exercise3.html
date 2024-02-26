@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="exercise3.css">
     <title>Document</title>
@@ -12,20 +13,23 @@
         <div class="login">
             <h1>Log In</h1>
 
-            <form action="/action_page.php">
-                <label for="fname"></label><br>
-                <input type="text" id="email" name="email" value="email"><br>
-                <label for="lname"></label><br>
-                <input type="text" id="pass" name="pass" value="password"><br><br>
-                <input type="checkbox" id="remember">
+            <form class="form" action="/action_page.php">
+                <input class="input" type="text" id="email" name="email" value="email"><br>
+                <input class="input" type="text" id="pass" name="pass" value="password"><br><br>
                 <div class="remember_row">
-                    <label for="vehicle1"> Remember me</label><br>
-                    <a href="">Forgot password?</a>
+                    <div>
+                        <input type="checkbox" id="box">
+                        <label id="remember" for="1"> Remember me</label><br>
+                    </div>
+                    <div>
+                        <a href="">Forgot password?</a>
+                    </div>
                 </div>
-            <input type="submit" value="Log In">
             </form>
 
-            <p>Or Connect with</p>
+            <button>Log In</button>
+
+            <p class="or">Or Connect with</p>
             <div class="icons">
                 <i class="fa-brands fa-facebook" style="color: #000000;"></i>
                 <i class="fa-brands fa-twitter" style="color: #000000;"></i>
@@ -34,11 +38,13 @@
             </div>
         </div>
         <div class="register">
-            <!-- <i class="fa-solid fa-user-plus fa-2xl" style="color: #030303;"></i> -->
-            <p>Hello, friend!</p>
-            <p>Enter your personal details and start journey
-                <br>with us</p>
-            <a href="">Register</a>
+            <div class="reg_row">
+                <i class="fa-solid fa-user-plus fa-2xl" style="color: #030303;"></i>
+                <p>Hello, friend!</p>
+                <p>Enter your personal details and start journey
+                    <br>with us</p>
+                <a href="">Register</a>
+            </div>
         </div>
     </div>
 </body>

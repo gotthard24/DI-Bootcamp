@@ -47,13 +47,21 @@
     text-transform: uppercase;
     color: white;
     border: none;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+}
+
+.or{
+    margin-bottom: 25px;
+}
+
+.icons *{
+    margin: 0px 5px 100px 0px;
 }
 
 .register{
     width: 50%;
     position: absolute;
-    height: 281.88px;
+    height: 435px;
     background: linear-gradient(270deg, #de58ff 0%, #891ead 100%);
     text-align: center;  
 }

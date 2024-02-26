@@ -14,7 +14,7 @@
     position: relative;
     background-color: rgb(239, 239, 239);
     text-align: center;
-    width: 50%;
+    width: 45%;
 }
 
 .login h1{
@@ -59,13 +59,42 @@
 }
 
 .register{
-    width: 50%;
+    width: 45%;
     position: absolute;
     height: 435px;
     background: linear-gradient(270deg, #de58ff 0%, #891ead 100%);
     text-align: center;  
 }
 
+.register *{
+    color: #fff;
+    margin-bottom: 10px; 
+}
+
+.fa-user-plus{
+    scale: 3;
+    margin-bottom: 75px;
+}
+.title{
+    font-size: 40px;
+    font-weight: bold;
+}
+
 .reg_row{
     padding: 20% 30px;
+}
+
+.reg_button{
+    padding: 8px 30px;
+    border-radius: 40px;
+    background-color:#ffffff00;
+    border: solid 1px #fff;
+    text-decoration: none;
+}
+
+#reg_btn{
+    font-weight: bold;
+    font-size: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
 }

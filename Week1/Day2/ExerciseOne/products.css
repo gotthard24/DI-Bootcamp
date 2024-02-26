@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+}
+
+.content{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.product {
+    display: inline-block;
+    text-align: center;
+}
+.product h5{
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.imgblock{
+    position: relative;
+}
+
+.stickers *{
+    display: inline-block;
+    position: relative;
+    top: 70px;
+}
+.stickernew{
+    background-color: green;
+    border-radius: 50%;
+    padding: 12px 6px;
+    margin-right: 70px;
+    width: fit-content;
+}
+.stickersale{
+    background-color: rgb(192, 21, 21);
+    border-radius: 50%;
+    padding: 12px 6px;
+    width: fit-content;
+}
+
+.price *{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.greenprice{
+    font-size: 20px;
+    color: rgb(12, 200, 31);
+}
+.grayprice{
+    color: rgba(128, 128, 128, 0.54);
+    text-decoration: line-through;
+}
+
+.prod_img{
+    width: 200px;
+    margin: 20px 5px;
+}
+
+.button{
+    padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.664);
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+}

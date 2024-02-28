@@ -1,0 +1,115 @@
+* {
+    font-family: "Raleway", sans-serif;
+}
+body{
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+h1{
+    margin: 0px 0px 20px 0px;
+    font-size: 48px;
+    color: #95aca4;
+}
+
+h2{
+    font-size: 16px;
+    color: #95aca4;
+}
+
+hr{
+    border: none;
+    height: 3px;
+    background-color: #f8f8f8;
+}
+
+.wrapper{
+    padding: 2%;
+    padding-right: 0px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #547067;
+    width: 700px;
+}
+
+.general{
+    display: flex;
+    gap: 20px;
+}
+
+.general div{
+    flex: 1;
+}
+
+.title_and_icons i{
+    margin-right: 5%;
+    margin-bottom: 7.5%;
+}
+
+#aboutme{
+    margin-top: 2%;
+}
+
+.center{
+    display: flex;
+    gap: 20px;
+}
+
+.center div{
+    flex: 1;
+}
+
+.center_aside{
+    display: flex;
+    flex-direction: column;
+}
+
+.placejoint{
+    display: flex;
+    gap: 10px;
+    color: #95aca4;
+    font-size: 12px;
+}
+.placejoint :first-child{
+    padding-right: 10px;
+    border-right: 2px solid #95aca4;
+}
+
+.block_title{
+    display: flex;
+    gap: 30%;
+}
+.education{
+    padding-left: 10%;
+    background-color: #f8f8f8;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.education hr{
+    background-color: #f4f4f4;
+}
+
+.education *{
+    margin: 0px;
+    padding-bottom: 8px;
+}
+.education hr{
+    margin: 0px;
+    padding: 0px;
+}
+
+footer{
+    background-color: #f8f8f8;
+}
+
+.projects{
+    display: flex;
+}
+
+.projects div{
+    flex: 1;
+}

@@ -1,0 +1,22 @@
+body{
+    padding: 5%;
+    padding-top: 1%;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.stats{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat_article{
+    font-size: 0.5rem;
+}

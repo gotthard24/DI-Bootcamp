@@ -1,6 +1,10 @@
 .content{
     display: flex;
+    width: fit-content;
     gap: 100px;
+    /* background-image: url(https://i.pinimg.com/236x/d2/4f/4c/d24f4cd09bb255bcfd15209d3d5a2101.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 .set{

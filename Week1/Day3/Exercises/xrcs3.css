@@ -1,0 +1,27 @@
+body{
+    padding: 5%;
+}
+
+.container{
+    display: flex;
+    height: 50vh;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: #fff;
+    height: 50px;
+    flex: 4;
+}
+
+.one{
+    background-color: rgb(176, 56, 195);
+    flex: 1;
+}
+
+.two{
+    background-color: rgba(97, 97, 230, 0.475);
+}

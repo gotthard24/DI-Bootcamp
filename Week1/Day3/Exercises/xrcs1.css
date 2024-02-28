@@ -1,0 +1,36 @@
+.wrapper{
+    padding: 20px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    height: 100vh;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    height: 100px;
+}
+
+.two{
+    align-self: center;
+    height: 200px;
+    width: 50%;
+    background-color: aqua;
+}
+
+.text p{
+    width: fit-content;
+    height: fit-content;
+    margin: 0px;
+}
+
+.text{
+    width: fit-content;
+    height: fit-content;
+}

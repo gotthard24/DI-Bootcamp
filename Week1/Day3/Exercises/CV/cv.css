@@ -67,17 +67,6 @@ hr{
     flex-direction: column;
 }
 
-.placejoint{
-    display: flex;
-    gap: 10px;
-    color: #95aca4;
-    font-size: 12px;
-}
-.placejoint :first-child{
-    padding-right: 10px;
-    border-right: 2px solid #95aca4;
-}
-
 .block_title{
     display: flex;
     gap: 30%;
@@ -100,6 +89,21 @@ hr{
 .education hr{
     margin: 0px;
     padding: 0px;
+}
+
+.placejoint{
+    display: flex;
+    height: fit-content;
+    gap: 10px;
+    color: #95aca4;
+    font-size: 12px;
+}
+.placejoint :first-child{
+    padding-right: 10px;
+    border-right: 2px solid #95aca4;
+}
+.placejoint *{
+    padding-bottom: 0px;
 }
 
 footer{

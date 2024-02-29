@@ -6,6 +6,9 @@ body{
     padding-right: 0px;
 }
 
+a{
+    color: #95aca4;
+}
 h1{
     margin: 0px 0px 20px 0px;
     font-size: 48px;
@@ -13,6 +16,7 @@ h1{
 }
 
 h2{
+    margin-left: 10px;
     font-size: 16px;
     color: #95aca4;
 }
@@ -24,15 +28,17 @@ hr{
 }
 
 .wrapper{
+    background-color:#95aca4;
     padding: 2%;
     padding-right: 0px;
 }
 .content{
+    background-color: white;
     display: flex;
     flex-direction: column;
     padding: 10px;
-    border: 1px solid #547067;
     width: 700px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
 
 .general{
@@ -112,8 +118,6 @@ footer{
 
 .projects{
     display: flex;
-}
-
-.projects div{
-    flex: 1;
+    align-items: center;
+    justify-content: space-evenly;
 }

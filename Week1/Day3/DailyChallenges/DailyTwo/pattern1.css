@@ -1,0 +1,39 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.pattern{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.pattern_row{
+    display: flex;
+    gap: 5px;
+}
+
+.box{
+    width: 50px;
+    height: 50px;
+}
+
+.one{
+    background-color: #ff7100;
+}
+
+.two{
+    background-color: #ffb26d;
+}
+
+.three{
+    background-color: #a84a00;
+}
+
+.four{
+    background-color: #ff7100;
+}

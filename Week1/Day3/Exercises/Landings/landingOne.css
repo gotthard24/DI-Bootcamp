@@ -6,9 +6,6 @@
 .container{
     width: 100%;
     height: 100vh;
-    margin: 0 auto;
-    /* padding: 5%;
-    padding-top: 1%; */
     background-image: url(https://i.pinimg.com/564x/1f/34/cd/1f34cd5b7477b6bd0c357abedbf13f31.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -33,7 +30,7 @@ header{
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 20%;
+    gap: 10vw;
 }
 
 .number{
@@ -59,7 +56,7 @@ header{
 
 .card{
     display: flex;
-    height: fit-content;
+    height: 300px;
     width: 30%;
     flex-direction: column;
     align-items: center;
@@ -82,15 +79,30 @@ header{
 }
 
 .top{
-    padding: 5%;
-    background-color: rgba(228, 255, 252, 0.341);
+    padding: 7%;
+    background-color: rgba(228, 255, 252, 1);
     height: 50%;
+    width: 100%;
 }
+
+.name{
+    margin-top: 15%;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+
+.description{
+    font-size: 12px;
+}
+
 .bottom{
     padding: 5%;
-    height: fit-content;
     background-color: #6bbebe;
     height: 50%;
+    width: 104%;
+    flex: 1 auto;
+    text-align: center;
+    color: white;
 }
 
 .face{
@@ -102,10 +114,83 @@ header{
     display: flex;
     justify-self: center;
     align-self: center;
-    top: 48%;
+    top: 50%;
     transform: translateY(-50%);
 }
 #face{
     width: 100%;
     height: 100%;
+}
+
+@media screen and (max-width: 1048px) {
+    .header{
+        margin-bottom: 300px;
+    }
+    .stats{
+        flex-direction: column;
+        text-align: center;
+        gap: 0px;
+    }
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 400px;
+        padding: 0%;
+        margin-top: 200px;
+        margin-bottom: 30px;
+    }
+    .card{
+        width: 50%;
+        transform: translateX(-7%);
+        align-self: center;
+        justify-self: center;
+    }
+    .card_article{
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+    .name{
+        margin-top: 35px;
+    }
+    .description{
+        margin-bottom: 40px;
+    }
+    .bottom{
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .cards{
+        margin-top: 70%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .title{
+        font-size: 14px;
+    }
+    .cards{
+        margin-top: 100%;
+        width: 300px;
+    }
+
+    .card_article{
+        font-size: 12px;
+    }
+
+    .name{
+        font-size: 14px;
+    }
+
+    .description{
+        font-size: 12px;
+    }
+
+    .face{
+        transform: translateY(-30%);
+    }
 }

@@ -1,3 +1,5 @@
-/* .title{
-    font-size: 1.5rem;
-} */
+body{
+    background-image: url(https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

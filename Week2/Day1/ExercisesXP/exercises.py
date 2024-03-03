@@ -1,14 +1,5 @@
 #exercise 1
-# hello = "Hello world"
-# ammount = 4
-# for action in range(ammount):
-#     print(hello)
-    
-# if loops are forbidden
-# print(hello)
-# print(hello)
-# print(hello)
-# print(hello)
+# print("Hello World\n" *4)
 
 #exercise 2
 # print((99**3)*8)

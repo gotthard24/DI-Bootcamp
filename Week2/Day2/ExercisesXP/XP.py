@@ -140,29 +140,29 @@
 #     print(f"Total price is: {total_cost}")
 
 #exercise10
-sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", 
-                   "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
-finished_sandwiches = []
-index = 0
+# sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", 
+#                    "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+# finished_sandwiches = []
+# index = 0
 
-while "Pastrami sandwich" in sandwich_orders:
-    sandwich_orders.remove("Pastrami sandwich")
+# while "Pastrami sandwich" in sandwich_orders:
+#     sandwich_orders.remove("Pastrami sandwich")
 
-for sandwich in sandwich_orders:
-    finished_sandwiches.append(sandwich)
+# for sandwich in sandwich_orders:
+#     finished_sandwiches.append(sandwich)
 
 
-for item in finished_sandwiches:
-    print(f'I made your {item}')
+# for item in finished_sandwiches:
+#     print(f'I made your {item}')
     
         
-# for index in range(len(sandwich_orders)):
-#     finished_sandwiches.append(sandwich_orders[index])
-#     sandwich_orders.pop()
+# # for index in range(len(sandwich_orders)):
+# #     finished_sandwiches.append(sandwich_orders[index])
+# #     sandwich_orders.pop()
 
     
-# while len(sandwich_orders) != 0:
-#     finished_sandwiches.append(sandwich_orders[index])
-#     sandwich_orders.pop(0)
-#     index += 1
-#     print()
+# # while len(sandwich_orders) != 0:
+# #     finished_sandwiches.append(sandwich_orders[index])
+# #     sandwich_orders.pop(0)
+# #     index += 1
+# #     print()

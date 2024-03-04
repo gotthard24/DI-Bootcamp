@@ -19,19 +19,14 @@
 #     print(number)
 
 #challenge 2
-# final_string = ''
-# user_input = input("> ")
-# temp_list = list(user_input)
-# final_list = []
+final_string = ''
+user_input = input("> ")
+final_list = [""]
 
-# for iteration in range(len(temp_list)):
-#     if temp_list[iteration] not in final_list:
-#         final_list.append(temp_list[iteration])
-
-# for item in temp_list:
-#     if item not in final_list:
-#         final_list.append(item)
+for letter in user_input:
+    if letter != final_list[-1]:
+        final_list.append(letter)
         
-# final_string = final_string.join(final_list)
+final_string = final_string.join(final_list)
     
-# print(final_string)
+print(f"'{final_string}'")

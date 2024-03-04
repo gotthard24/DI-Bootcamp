@@ -51,13 +51,57 @@
 #         print(f'{char} is a consonant')
 
 #6         
-words_ammount = 7
-words = []
-count = 0
+# words_ammount = 7
+# words = []
+# count = 0
 
-while count < words_ammount:
-    word = input("> ")
-    words.append(word)
-    count += 1
-    
-print(words)
+# while count < words_ammount:
+#     word = input("Enter your word: ")
+#     words.append(word)
+#     count += 1
+
+# letter = input("Enter your letter: ") 
+
+# for word in words:
+#     if letter in word:
+#         print(word.index(letter))
+#     else:
+#         print(f"There is no letter {letter} in {word}")
+
+#7
+# numbers = list(range(1, 1000001))
+# total_sum = (len(numbers) * (numbers[0] + numbers[-1])) // 2
+
+# print(min(numbers))
+# print(max(numbers))
+# print(total_sum)
+
+#8
+# user_input = input("Write a sequence of numbers separated by comma: ")
+# numbers_list = user_input.split(",")
+# numbers_tuple = tuple(numbers_list.copy())
+
+# print(numbers_list)
+# print(numbers_tuple)
+
+#9
+import random
+
+print("I made a number from 0 to 9. Try to guess\n> ")
+number = random.randint(0, 9)
+user_input = ''
+total_counts = 0
+
+while True:
+    user_input = input("> ")
+    if user_input == str(number):
+        total_counts += 1
+        print("Winner!")
+        break
+    elif user_input == "quit":
+        break
+    else:
+        print("Try again\n")
+        total_counts += 1
+
+print (f'Total tries: {total_counts}')

@@ -7,6 +7,7 @@ def getint(var):
             print("It's not a number. Please try again")
             var = input("Enter the number: ")
 
+
 inches = getint(input("Enter the number: "))
 coef = 2.54
 height = inches * coef

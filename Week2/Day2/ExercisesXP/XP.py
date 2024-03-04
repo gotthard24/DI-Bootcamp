@@ -90,22 +90,79 @@
 #     user_input = input("> ")
 
 #exercise9
-def getint(var):
-    while True:
-        try:
-            integer_value = int(var)
-            return integer_value
-        except ValueError:
-            print("It's not a number. Please try again")
-            var = input("Enter the number: ")
-            
-            
-baby_price = 0
-children_price = 10
-adult_price = 15
-total_cost = 0
+# def getint(var):
+#     while True:
+#         try:
+#             integer_value = int(var)
+#             return integer_value
+#         except ValueError:
+#             print("It's not a number. Please try again")
+#             var = input("Enter the number: ")
 
-user_input = getint("Please enter ammount of family members ")
+# pegi = 16
+# is_permitted = False
+            
+# baby_age = 3
+# children_age = 12            
+# baby_price = 0
+# children_price = 10
+# adult_price = 15
+# total_cost = 0
+# kid_list = []
+# members_ages = []
+# members = {}
 
-for member in user_input:
-    user_input = getint("Please enter age ")
+# members_ammount = getint(input("Please enter ammount of members "))
+
+# for member in range(members_ammount):
+#     user_name = input(f"Please enter the name of {member + 1} member: ")
+#     user_age = getint(input(f"Please enter age of {member + 1} member: "))
+#     members_ages.append(user_age)
+#     members.update({user_name : user_age})
+    
+# for age in members_ages:
+#     if age > pegi:
+#         is_permitted = True
+        
+# if not is_permitted:
+#     for name in members.keys():
+#         kid_list.append(name)
+#     print(f"{kid_list} Sorry guys you need some adult to see this movie ... ")
+    
+# if is_permitted:
+#     for member in range(members_ammount):
+#         if members_ages[member] < baby_age:
+#             total_cost += baby_price
+#         elif members_ages[member] >= 3 and members_ages[member] <= children_age:
+#             total_cost += children_price
+#         else:
+#             total_cost += adult_price
+#     print(f"Total price is: {total_cost}")
+
+#exercise10
+sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", 
+                   "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+finished_sandwiches = []
+index = 0
+
+while "Pastrami sandwich" in sandwich_orders:
+    sandwich_orders.remove("Pastrami sandwich")
+
+for sandwich in sandwich_orders:
+    finished_sandwiches.append(sandwich)
+
+
+for item in finished_sandwiches:
+    print(f'I made your {item}')
+    
+        
+# for index in range(len(sandwich_orders)):
+#     finished_sandwiches.append(sandwich_orders[index])
+#     sandwich_orders.pop()
+
+    
+# while len(sandwich_orders) != 0:
+#     finished_sandwiches.append(sandwich_orders[index])
+#     sandwich_orders.pop(0)
+#     index += 1
+#     print()

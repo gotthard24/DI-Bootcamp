@@ -151,18 +151,9 @@
 # for sandwich in sandwich_orders:
 #     finished_sandwiches.append(sandwich)
 
-
 # for item in finished_sandwiches:
 #     print(f'I made your {item}')
-    
-        
-# # for index in range(len(sandwich_orders)):
-# #     finished_sandwiches.append(sandwich_orders[index])
-# #     sandwich_orders.pop()
-
-    
-# # while len(sandwich_orders) != 0:
-# #     finished_sandwiches.append(sandwich_orders[index])
-# #     sandwich_orders.pop(0)
-# #     index += 1
-# #     print()
+            
+# for index in range(len(sandwich_orders)):
+#     finished_sandwiches.append(sandwich_orders[index])
+#     sandwich_orders.pop()

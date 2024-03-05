@@ -17,36 +17,26 @@ cake = [
     ['~','~','~','~','~','~','~','~','~','~','~','~','~','~'],
     ]
 
-for index in range(age):
+for index in range(age):  
     cake[0].insert(7, "i")
-     
+    cake[2].insert(5, "_") 
+    cake[3].insert(2, "^")
+    cake[5].insert(2, " ")
+    cake[6].insert(2, "~")
+    
 for index in range(age // 2):        
     cake[1].insert(4, " ")
+    cake[4].insert(2, " ")
 if age % 2 != 0:
-    cake[1].insert(4, " ") 
+    cake[1].insert(4, " ")
+    cake[4].insert(2, " ")
 for index in range(age // 2):
     cake[1].insert(-5, " ")
-    
-for index in range(age):
-    cake[2].insert(5, "_")
-    
-for index in range(age):
-    cake[3].insert(2, "^")
-    
-for index in range(age // 2):
-    cake[4].insert(2, " ")
-if age % 2 != 0:
-    cake[4].insert(2, " ")
-for index in range(age // 2):
     cake[4].insert(-2, " ")
+     
+print("\n")
 
-for index in range(age):
-    cake[5].insert(2, " ")  
-    
-for index in range(age):
-    cake[6].insert(2, "~")  
-    
 for row in cake:
-    print("\n")
     for item in row:
         print(item, end="")
+    print()

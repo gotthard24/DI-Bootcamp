@@ -13,6 +13,8 @@ def encrypt(original, encryption_key):
 
    
     for char in original:
+        if char == ' ':
+            continue
         orig_index = alphabet_dict_reverse[char]
         encr_index = orig_index + encryption_key
         
@@ -40,6 +42,8 @@ def decrypt(encrypted, decryption_key):
 
    
     for char in encrypted:
+        if char == ' ':
+            continue
         encr_index = alphabet_dict_reverse[char]
         orig_index = encr_index - decryption_key
         

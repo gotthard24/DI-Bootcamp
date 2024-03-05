@@ -89,36 +89,36 @@
 # print(more_on_zara)
 
 # #exercise 4
-users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
-disney_users_A = {}
-disney_users_B = {}
-disney_users_C = {}
-for i in range(len(users)):
-    disney_users_A.update({users[i] : i}) 
+# users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
+# disney_users_A = {}
+# disney_users_B = {}
+# disney_users_C = {}
+# for i in range(len(users)):
+#     disney_users_A.update({users[i] : i}) 
     
-print(disney_users_A)
+# print(disney_users_A)
 
-for i in range(len(users)):
-    disney_users_B.update({i : users[i]}) 
+# for i in range(len(users)):
+#     disney_users_B.update({i : users[i]}) 
     
-print(disney_users_B)
+# print(disney_users_B)
 
-# sorted_users = sorted(users)
-# for i in range(len(sorted_users)):
-#     disney_users_C[sorted_users[i]] = i
+# # sorted_users = sorted(users)
+# # for i in range(len(sorted_users)):
+# #     disney_users_C[sorted_users[i]] = i
     
-disney_users_C = {user: i for i, user in enumerate(sorted(users))}
+# disney_users_C = {user: i for i, user in enumerate(sorted(users))}
 
-print(type(disney_users_C))
-print(disney_users_C)
+# print(type(disney_users_C))
+# print(disney_users_C)
 
 
-print('4.1')
-for key, value in disney_users_A.items():
-    if "i" in key:
-        print(key, ":", value, end=", ")
+# print('4.1')
+# for key, value in disney_users_A.items():
+#     if "i" in key:
+#         print(key, ":", value, end=", ")
 
-print('\n4.2')
-for key, value in disney_users_A.items():
-    if key[0].lower() == 'm' or key[0].lower() == 'p':
-        print(key, ":", value, end=", ")
+# print('\n4.2')
+# for key, value in disney_users_A.items():
+#     if key[0].lower() == 'm' or key[0].lower() == 'p':
+#         print(key, ":", value, end=", ")

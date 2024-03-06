@@ -109,73 +109,82 @@
 # main()
 
 ##exercise 8        
-# def quiz(data):
-#     score = 0
-#     fails = 0
-#     max_score = len(data)
+def quiz(data):
+    score = 0
+    fails = 0
+    user_answers = []
+    right_answers = []
+    max_score = len(data)
     
-#     while True:
-#         for dict in data:
-#             print(dict["question"])
-#             print()
-#             answer = input("> ")
-#             if answer.lower() == dict["answer"].lower():
-#                 score += 1
-#                 print("Right answer\n")
-#             else:
-#                 fails += 1
-#                 if fails == 3:
-#                     print("Do you want to restart ?\n1. Yes\n2. No ")
-#                     answer = input("> ")                   
-#                     if answer == "1":
-#                         break
-#                     elif answer == "2":
-#                         pass 
-#                     else:
-#                         print("Invalid input ... so we continue")                  
-#                 print("Wrong answer")
-#                 print(f"Right answer is {dict["answer"]}\n")
-#         else:
-#             break
+    while True:
+        for dict in data:
+            print(dict["question"])
+            right_answers.append(dict["answer"])
+            print()
+            answer = input("> ")
+            user_answers.append(answer)
+            if answer.lower() == dict["answer"].lower():
+                score += 1
+                print("Right answer\n")
+            else:
+                fails += 1
+                if fails == 3:
+                    print("Do you want to restart ?\n1. Yes\n2. No ")
+                    answer = input("> ")                                      
+                    if answer == "1":
+                        break
+                    elif answer == "2":
+                        pass 
+                    else:
+                        print("Invalid input ... so we continue")                  
+                print("Wrong answer")
+                print(f"Right answer is {dict["answer"]}\n")
+        else:
+            break
         
-#         continue
+        continue
             
-#     vars = [score, max_score]        
-#     return vars  
+    vars = [score, max_score, user_answers, right_answers]        
+    return vars  
 
            
-# def play():
-#     score_and_max = quiz(data)
-#     score = score_and_max[0]
-#     max_score = score_and_max[1]
-#     print(f"You have answered {score} questions right from {max_score}")
+def play():
+    score_and_max = quiz(data)
+    score = score_and_max[0]
+    max_score = score_and_max[1]
+    user_answers = score_and_max[2]
+    right_answers = score_and_max[3]
+    
+    print(f"You have answered {score} questions right from {max_score}\n")
+    print(f'Your answers: {user_answers}\n')
+    print(f'Right answers: {right_answers}\n')
     
     
-# data = [
-#     {
-#         "question": "What is Baby Yoda's real name?",
-#         "answer": "Grogu"
-#     },
-#     {
-#         "question": "Where did Obi-Wan take Luke after his birth?",
-#         "answer": "Tatooine"
-#     },
-#     {
-#         "question": "What year did the first Star Wars movie come out?",
-#         "answer": "1977"
-#     },
-#     {
-#         "question": "Who built C-3PO?",
-#         "answer": "Anakin Skywalker"
-#     },
-#     {
-#         "question": "Anakin Skywalker grew up to be who?",
-#         "answer": "Darth Vader"
-#     },
-#     {
-#         "question": "What species is Chewbacca?",
-#         "answer": "Wookiee"
-#     }
-# ]
+data = [
+    {
+        "question": "What is Baby Yoda's real name?",
+        "answer": "Grogu"
+    },
+    {
+        "question": "Where did Obi-Wan take Luke after his birth?",
+        "answer": "Tatooine"
+    },
+    {
+        "question": "What year did the first Star Wars movie come out?",
+        "answer": "1977"
+    },
+    {
+        "question": "Who built C-3PO?",
+        "answer": "Anakin Skywalker"
+    },
+    {
+        "question": "Anakin Skywalker grew up to be who?",
+        "answer": "Darth Vader"
+    },
+    {
+        "question": "What species is Chewbacca?",
+        "answer": "Wookiee"
+    }
+]
 
-# play()
+play()

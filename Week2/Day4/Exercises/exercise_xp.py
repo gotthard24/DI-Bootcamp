@@ -108,28 +108,44 @@
     
 # main()
 
-#exercise 8
-# def questions(data):
+##exercise 8        
+# def quiz(data):
 #     score = 0
+#     fails = 0
 #     max_score = len(data)
     
-#     for dict in data:
-#         print(dict["question"])
-#         print()
-#         answer = input("> ")
-#         if answer.lower() == dict["answer"].lower():
-#             score += 1
-#             print("Right answer\n")
+#     while True:
+#         for dict in data:
+#             print(dict["question"])
+#             print()
+#             answer = input("> ")
+#             if answer.lower() == dict["answer"].lower():
+#                 score += 1
+#                 print("Right answer\n")
+#             else:
+#                 fails += 1
+#                 if fails == 3:
+#                     print("Do you want to restart ?\n1. Yes\n2. No ")
+#                     answer = input("> ")                   
+#                     if answer == "1":
+#                         break
+#                     elif answer == "2":
+#                         pass 
+#                     else:
+#                         print("Invalid input ... so we continue")                  
+#                 print("Wrong answer")
+#                 print(f"Right answer is {dict["answer"]}\n")
 #         else:
-#             print("Wrong answer")
-#             print(f"Right answer is {dict["answer"]}\n")
+#             break
+        
+#         continue
             
 #     vars = [score, max_score]        
 #     return vars  
 
            
-# def quiz():
-#     score_and_max = questions(data)
+# def play():
+#     score_and_max = quiz(data)
 #     score = score_and_max[0]
 #     max_score = score_and_max[1]
 #     print(f"You have answered {score} questions right from {max_score}")
@@ -162,4 +178,4 @@
 #     }
 # ]
 
-# quiz()
+# play()

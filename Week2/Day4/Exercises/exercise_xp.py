@@ -62,7 +62,7 @@
 # #exercise 7
 # import random
 
-# def getint(var):
+# def isint(var):
 #     while True:
 #         try:
 #             integer_value = int(var)

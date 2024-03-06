@@ -37,62 +37,78 @@ def move_cursor_left(chars):
 def move_cursor_right(chars):
     sys.stdout.write("\x1b[%dC" % chars)
     sys.stdout.flush()
-    
 
-def draw_x(x, y):
+
+def draw_existing(positions):
+    for i in range(len(positions)):
+        position = positions[i]
+        draw_x(position[0], position[1])
+
+
+def draw_x(y, x, color = '\033[0m'):
     position = [y, x]
+    
     if position == [0,0]:
         move_cursor_up(7)
         move_cursor_right(3)
-        print("X", end=(''))
+        sys.stdout.write(color + '\bX\b' + '\033[0m') 
+        sys.stdout.flush()
         move_cursor_down(7)
         move_cursor_left(3)
     if position == [0,1]:
         move_cursor_up(7)
         move_cursor_right(9)
-        print("X", end=(''))
+        sys.stdout.write(color + '\bX\b' + '\033[0m') 
+        sys.stdout.flush()
         move_cursor_down(7)
         move_cursor_left(9)
     if position == [0,2]:
         move_cursor_up(7)
         move_cursor_right(14)
-        print("X", end=(''))
+        sys.stdout.write(color + '\bX\b' + '\033[0m') 
+        sys.stdout.flush()
         move_cursor_down(7)
         move_cursor_left(14)
     if position == [1,0]:
         move_cursor_up(5)
         move_cursor_right(3)
-        print("X", end=(''))
+        sys.stdout.write(color + '\bX\b' + '\033[0m') 
+        sys.stdout.flush()
         move_cursor_down(5)
         move_cursor_left(3)
     if position == [1,1]:
         move_cursor_up(5)
         move_cursor_right(9)
-        print("X", end=(''))
+        sys.stdout.write(color + '\bX\b' + '\033[0m') 
+        sys.stdout.flush()
         move_cursor_down(5)
         move_cursor_left(9)
     if position == [1,2]:
         move_cursor_up(5)
         move_cursor_right(14)
-        print("X", end=(''))
+        sys.stdout.write(color + '\bX\b' + '\033[0m') 
+        sys.stdout.flush()
         move_cursor_down(5)
         move_cursor_left(14)
     if position == [2,0]:
         move_cursor_up(3)
         move_cursor_right(3)
-        print("X", end=(''))
+        sys.stdout.write(color + '\bX\b' + '\033[0m') 
+        sys.stdout.flush()
         move_cursor_down(3)
         move_cursor_left(3)
     if position == [2,1]:
         move_cursor_up(3)
         move_cursor_right(9)
-        print("X", end=(''))
+        sys.stdout.write(color + '\bX\b' + '\033[0m') 
+        sys.stdout.flush()
         move_cursor_down(3)
         move_cursor_left(9)
     if position == [2,2]:
         move_cursor_up(3)
         move_cursor_right(14)
-        print("X", end=(''))
+        sys.stdout.write(color + '\bX\b' + '\033[0m') 
+        sys.stdout.flush()
         move_cursor_down(3)
         move_cursor_left(14)
     
@@ -118,6 +134,7 @@ map_size = 18
 y = 1
 x = 1
 position = coordinates[y][x]
+positions = []
 is_playing = False
 
 draw_map(game_map, map_size)
@@ -134,7 +151,8 @@ while not is_playing:
         
 while is_playing:  
     draw_map(game_map, map_size) 
-    draw_x(x, y)
+    draw_existing(positions)
+    draw_x(y, x, '\033[91m')
     key = get_key_press()
     
     if key == False:
@@ -155,3 +173,5 @@ while is_playing:
         x += 1
         if x > 2:
             x = 0
+    if key == True:
+        positions.append([y,x])

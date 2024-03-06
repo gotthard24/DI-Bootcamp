@@ -31,7 +31,7 @@ shop = {
 
 is_shopping = True
 
-for i, (key, value) in enumerate(shop.items(), 1):
+for key, value in shop.items():
     temp_list.append(f'{key} : {value}$\n')
     message = ''.join(temp_list)  
 
@@ -49,6 +49,8 @@ while is_shopping:
         if sum(total_price) <= wallet:
             print(f"You have just bought this products\n{sorted(products)}")
             print(f"You paid {sum(total_price)}$")
+            wallet -= sum(total_price)
+            print(f"Money left {wallet}$")
             print("Have a nice day! )")
             is_shopping = False
         else:

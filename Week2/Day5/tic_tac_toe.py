@@ -51,31 +51,26 @@ def move_cursor_right(chars):
     sys.stdout.flush()
 
 
-def draw_existing(positions, is_x):
+def draw_existing(positions):
     for i in range(len(positions)):
         position = positions[i]
-        place_x(position[0], position[1])
+        place_xo(position[0], position[1], position[2])
 
 
-def draw_x(up, right, color = '\033[0m'):
+def draw_xo(up, right, is_x, color = '\033[0m'):
     move_cursor_up(up)
-    move_cursor_right(right)        
-    sys.stdout.write(color + '\bX\b' + '\033[0m') 
-    sys.stdout.flush()
+    move_cursor_right(right)
+    if is_x == True:     
+        sys.stdout.write(color + '\bX\b' + '\033[0m') 
+        sys.stdout.flush()
+    else:    
+        sys.stdout.write(color + '\bO\b' + '\033[0m') 
+        sys.stdout.flush()
     move_cursor_down(up)
     move_cursor_left(right)
-    
-    
-def draw_o(up, right,color = '\033[0m'):
-    move_cursor_up(up)
-    move_cursor_right(right)        
-    sys.stdout.write(color + '\bO\b' + '\033[0m') 
-    sys.stdout.flush()
-    move_cursor_down(up)
-    move_cursor_left(right)
-    
 
-def place_x(y, x, color = '\033[0m'):  
+    
+def place_xo(y, x, is_x, color = '\033[0m'):  
     up_0 = 7
     up_1 = 5
     up_2 = 3
@@ -86,54 +81,23 @@ def place_x(y, x, color = '\033[0m'):
     position = [y,x]
     
     if position == [0,0]:
-        draw_x(up_0,right_0,color)
+        draw_xo(up_0,right_0, is_x,color)
     if position == [0,1]:
-        draw_x(up_0,right_1,color)
+        draw_xo(up_0,right_1,is_x,color)
     if position == [0,2]:
-        draw_x(up_0,right_2,color)
+        draw_xo(up_0,right_2,is_x,color)
     if position == [1,0]:
-        draw_x(up_1,right_0,color)
+        draw_xo(up_1,right_0,is_x,color)
     if position == [1,1]:
-        draw_x(up_1,right_1,color)
+        draw_xo(up_1,right_1,is_x,color)
     if position == [1,2]:
-        draw_x(up_1,right_2,color)
+        draw_xo(up_1,right_2,is_x,color)
     if position == [2,0]:
-        draw_x(up_2,right_0,color)
+        draw_xo(up_2,right_0,is_x,color)
     if position == [2,1]:
-        draw_x(up_2,right_1,color)
+        draw_xo(up_2,right_1,is_x,color)
     if position == [2,2]:
-        draw_x(up_2,right_2,color)
-        
-    
-def place_o(y, x, color = '\033[0m'):
-    up_0 = 7
-    up_1 = 5
-    up_2 = 3
-    right_0 = 3
-    right_1 = 9
-    right_2 = 14
-    
-    position = [y,x]
-    
-    if position == [0,0]:
-        draw_o(up_0,right_0,color)
-    if position == [0,1]:
-        draw_o(up_0,right_1,color)
-    if position == [0,2]:
-        draw_o(up_0,right_2,color)
-    if position == [1,0]:
-        draw_o(up_1,right_0,color)
-    if position == [1,1]:
-        draw_o(up_1,right_1,color)
-    if position == [1,2]:
-        draw_o(up_1,right_2,color)
-    if position == [2,0]:
-        draw_o(up_2,right_0,color)
-    if position == [2,1]:
-        draw_o(up_2,right_1,color)
-    if position == [2,2]:
-        draw_o(up_2,right_2,color)
-    
+        draw_xo(up_2,right_2,is_x,color) 
         
 
 game_map = [
@@ -176,11 +140,13 @@ while not is_playing:
 while is_playing:  
     clear_screen()
     draw_map(game_map, map_size) 
-    draw_existing(positions, is_x)
+    draw_existing(positions)
+    place_xo(y, x, is_x, red)
     if is_x == True:
-        place_x(y, x, red)
+        print("Player's 1 Turn")
     else:
-        place_o(y, x, red)
+        print("Player's 2 Turn")
+    print(positions)
     key = get_key_press()
     
     if key == False:
@@ -202,5 +168,12 @@ while is_playing:
         if x > 2:
             x = 0
     if key == True:
-        positions.append([y,x]) #is_x
-        is_x = swap(is_x)
+        module = [y,x,is_x]  
+        anti_module = [y,x,swap(is_x)]      
+        if module in positions or anti_module in positions:
+            pass
+        else:
+            positions.append(module)
+            is_x = swap(is_x)
+            
+# Осталось добавить вычисление победы по positions (если три подряд позишина одновременно в списке)

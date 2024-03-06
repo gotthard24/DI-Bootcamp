@@ -1,13 +1,16 @@
 def decrypt(matrix):
     decrypted = []
-    for column in range(len(matrix[item])):
+    alphabet = [chr(ord('a') + i) for i in range(26)]
+    alphabet_alpha = [chr(ord('A') + i) for i in range(26)]
+    
+    for column in range(len(matrix[0])):
         for row in range(len(matrix)):
-            for item in range(len(matrix[item])):
-                decrypt.aitem[column]
+            if matrix[row][column] in alphabet or matrix[row][column] in alphabet_alpha:
+                decrypted.append(matrix[row][column])
             
-                
+    return decrypted
             
-
+    
 matrix = [
     ['7', 'i', 'i'],
     ['T', 's', 'x'],
@@ -18,3 +21,6 @@ matrix = [
     ['#', 't', '%'],
     ['^', 'r', '!']
 ]
+
+matrix_message_list = decrypt(matrix)
+print(matrix_message_list)

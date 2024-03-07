@@ -2,6 +2,39 @@ import msvcrt
 import sys
 import os
 
+def win_condition_check(pos):
+    win_con_x = [
+        [[0,0,True],[0,1,True],[0,2,True]],
+        [[1,0,True],[1,1,True],[1,2,True]],
+        [[2,0,True],[2,1,True],[2,2,True]],
+        [[0,0,True],[1,0,True],[2,0,True]],
+        [[0,1,True],[1,1,True],[2,1,True]],
+        [[0,2,True],[1,2,True],[2,2,True]],
+        [[0,0,True],[1,1,True],[2,2,True]],
+        [[0,2,True],[1,1,True],[2,0,True]],
+        ]
+    win_con_o = [
+        [[0,0,False],[0,1,False],[0,2,False]],
+        [[1,0,False],[1,1,False],[1,2,False]],
+        [[2,0,False],[2,1,False],[2,2,False]],
+        [[0,0,False],[1,0,False],[2,0,False]],
+        [[0,1,False],[1,1,False],[2,1,False]],
+        [[0,2,False],[1,2,False],[2,2,False]],
+        [[0,0,False],[1,1,False],[2,2,False]],
+        [[0,2,False],[1,1,False],[2,0,False]],
+        ]
+    if len(pos) >= 9:
+        print("Draw !")
+        return True
+    for i in range(len(win_con_x)):
+        if win_con_x[i][0] in pos and win_con_x[i][1] in pos and win_con_x[i][2] in pos:
+            print("Player 1 Won !")
+            return True
+        elif win_con_o[i][0] in pos and win_con_o[i][1] in pos and win_con_o[i][2] in pos:
+            print("Player 2 Won !")
+            return True
+        
+    
 def swap(is_x):
     if is_x == True:
         is_x = False
@@ -126,8 +159,13 @@ is_x = True
 red = '\033[91m'
 
 draw_map(game_map, map_size)
+place_xo(y, x, is_x)
+place_xo(0, 0, is_x)
+place_xo(2, 2, is_x)
+place_xo(2, 1, False)
+place_xo(1, 2, False)
 
-print("Press W,S,A,D or Arrows for control\nPress ESC for exit\n")   
+print("Press W,S,A,D for control\nPress ESC for exit\n")   
 
 while not is_playing:
     print("Press Enter for start\n")
@@ -139,14 +177,20 @@ while not is_playing:
         
 while is_playing:  
     clear_screen()
-    draw_map(game_map, map_size) 
-    draw_existing(positions)
-    place_xo(y, x, is_x, red)
+    draw_map(game_map, map_size) # Empty board
+    draw_existing(positions)  # X and O that already on board
+    
+    if win_condition_check(positions) == None:
+        pass
+    else:
+        break
+    
+    place_xo(y, x, is_x, red) # Current turn 
     if is_x == True:
         print("Player's 1 Turn")
     else:
         print("Player's 2 Turn")
-    print(positions)
+
     key = get_key_press()
     
     if key == False:
@@ -175,5 +219,3 @@ while is_playing:
         else:
             positions.append(module)
             is_x = swap(is_x)
-            
-# Осталось добавить вычисление победы по positions (если три подряд позишина одновременно в списке)

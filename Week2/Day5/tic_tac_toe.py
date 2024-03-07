@@ -195,23 +195,23 @@ while is_playing:
     
     if key == False:
         is_playing = False
-    if key == "Up":
+    elif key == "Up":
         y -= 1
         if y < 0:
             y = 2
-    if key == "Down":
+    elif key == "Down":
         y += 1
         if y > 2:
             y = 0
-    if key == "Left":
+    elif key == "Left":
         x -= 1
         if x < 0:
             x = 2
-    if key == "Right":
+    elif key == "Right":
         x += 1
         if x > 2:
             x = 0
-    if key == True:
+    elif key == True:
         module = [y,x,is_x]  
         anti_module = [y,x,swap(is_x)]      
         if module in positions or anti_module in positions:

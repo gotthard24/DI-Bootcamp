@@ -219,3 +219,5 @@ while is_playing:
         else:
             positions.append(module)
             is_x = swap(is_x)
+            
+#Game works only on english keyboard

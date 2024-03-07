@@ -10,4 +10,5 @@ for i in range(len(list_of_numbers)):
         if abs(anti_number) in list_of_numbers:
             ammount += 1
 # print(sorted(list_of_numbers))
-print(ammount // 2)
+couples = ammount // 2
+print(couples)

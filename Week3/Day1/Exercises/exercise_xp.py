@@ -1,4 +1,4 @@
-# #exercise 1
+# # #exercise 1
 # class Cat:
 #     def __init__(self, cat_name, cat_age):
 #         self.name = cat_name
@@ -22,7 +22,7 @@
 # oldest = oldest_cat(katty, fluffy, chucha)
 # print(f"The oldest cat is {oldest.name}, and she is {oldest.age} years old")
 
-# #exercise 2
+# # #exercise 2
 # class Dog:
 #     def __init__(self, name = "noname", height = 10):
 #         self.name = name

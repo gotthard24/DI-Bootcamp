@@ -68,9 +68,9 @@ class Zoo():
         self.animals = []
 
 
-    def add_animal(self, new_animal):
+    def add_animal(self, *new_animal):
         if new_animal not in self.animals:
-            self.animals.append(new_animal)
+            self.animals.extend(new_animal)
             
             
     def get_animals(self):
@@ -102,24 +102,31 @@ class Zoo():
         animal_groups = self.sort_animals()
         for key, animals in animal_groups.items():
             i += 1
-            print(f"{i}:")
-            for animal in animals:
-                print(animal)
+            if len(animals) > 1:
+                print(f"{i}: {animals}", end=" ")
+            else:
+                print(f"{i}: {animals[0]}", end=" ")
+            # for animal in animals:
+            #     print(animal, end=" ")
             print()
-            
+      
+    
+    # def sort_animals(self):
+    #     self.animals.sort()
+    #     animal_groups = [[self.animals[0]]]
+    #     i = 1
+    #     list_count = 0
+    #     while i < len(self.animals):
+    #         if self.animals[i][0] == self.animals[i - 1][0]:
+    #             animal_groups[list_count].append(self.animals[i])
+    #         else:
+    #             animal_groups.append([self.animals[i]])
+    #             list_count += 1
+    #         i += 1
+    #     print(animal_groups)        
 
 ramat_gan_safari = Zoo("Ramat Gan Safari")
-ramat_gan_safari.add_animal("Zebra")
-ramat_gan_safari.add_animal("Lion")
-ramat_gan_safari.add_animal("Ape")
-ramat_gan_safari.add_animal("Baboon")
-ramat_gan_safari.add_animal("Bear")
-ramat_gan_safari.add_animal("Babaika")
-ramat_gan_safari.add_animal("Cat")
-ramat_gan_safari.add_animal("Cougar")
-ramat_gan_safari.add_animal("Eel")
-ramat_gan_safari.add_animal("Emu")
-ramat_gan_safari.add_animal("Eagle")
+ramat_gan_safari.add_animal("Zebra", "Lion", "Ape", "Baboon", "Bear", "Babaika", "Cat", "Cougar", "Eel", "Emu", "Eagle")
 ramat_gan_safari.get_animals()
 ramat_gan_safari.sell_animal("Lion")
 ramat_gan_safari.sort_animals()

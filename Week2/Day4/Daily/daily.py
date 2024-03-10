@@ -27,6 +27,7 @@ def encrypt(string, columns = 3):
                        
 matrix_string = "7iiTsxh%?i #sM $a #t%^r!"  
 matrix = encrypt(matrix_string)
+print(matrix)
 matrix_message_list = decrypt(matrix)
 message = "".join(matrix_message_list)
 print(message)

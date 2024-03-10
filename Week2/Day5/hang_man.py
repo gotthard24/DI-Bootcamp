@@ -32,7 +32,7 @@ wordslist = ['correction', 'childish', 'beach', 'python', 'assertive', 'interfer
 word = random.choice(wordslist)
 inputs = []
 
-print(word)
+# print(word)
 print(main_word(word, inputs))
 
 while True:

@@ -78,3 +78,69 @@
 # jija = dog.PetDog("Jija", 3 , 5)
 
 # jija.do_a_trick()
+
+# #exercise 4
+class Family():
+    def __init__(self, last_name, members):
+        self.members = members
+        self.last_name = last_name
+        
+    def born(self, **kwargs):
+        cell = {}
+        cell.update(kwargs)
+        self.members.append(cell)
+        print("Congrats with a new family member!")
+        
+    def is_18(self, name):
+        is_18 = None
+        for member in range(len(self.members)):
+            if name == self.members[member]['name']:
+                if self.members[member]['age'] >= 18:
+                    is_18 = True
+                else:
+                    is_18 = False
+            else:
+                continue
+        return is_18
+    
+    def family_presentation(self):
+        print(f"{self.last_name} family: ")
+        for member in range(len(self.members)):
+            print(self.members[member])
+        
+        
+# kovalenko = Family("Kovalenko",[
+#         {'name':'Michael','age':35,'gender':'Male','is_child':False},
+#         {'name':'Sarah','age':32,'gender':'Female','is_child':False}
+#     ])
+
+# kovalenko.born(name="Daniel", age=0, gender='Male', is_child=True)
+# print(kovalenko.is_18("Daniel"))
+# kovalenko.family_presentation()
+
+#exercise 5
+class TheIncredibles(Family):
+    def __init__(self, last_name, members):
+        super().__init__(last_name, members)
+        
+    def use_power(self, name):
+        if self.is_18(name) == True:
+            pass
+        else:
+            raise AttributeError(f"{name} is under 18")
+        for member in range(len(self.members)):
+            if name == self.members[member]['name']:
+                print(self.members[member]['power'])
+                
+    def incredible_presentation(self):
+        print("*Here is our powerful family *")
+        super().family_presentation()
+        
+incredibles = TheIncredibles('TheIncredibles', [
+        {'name':'Michael','age':35,'gender':'Male','is_child':False,'power': 'fly','incredible_name':'MikeFly'},
+        {'name':'Sarah','age':32,'gender':'Female','is_child':False,'power': 'read minds','incredible_name':'SuperWoman'}
+    ])
+
+incredibles.incredible_presentation()
+incredibles.born(name="Jack", age=0, gender='Male', is_child=True, power="Unknown Power", incredible_name="Baby Jack")
+incredibles.incredible_presentation()

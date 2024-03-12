@@ -1,4 +1,4 @@
-class Paginator():
+class Pagination():
     def __init__(self, items = None, pageSize = 10):
         self.items = items
         self.pageSize = int(pageSize)
@@ -53,7 +53,7 @@ class Paginator():
         
         
 alphabetList = list("abcdefghijklmnopqrstuvwxyz")
-p = Paginator(alphabetList, 4)
+p = Pagination(alphabetList, 4)
 p.getVisibleItems()
 p.nextPage()
 p.getVisibleItems()

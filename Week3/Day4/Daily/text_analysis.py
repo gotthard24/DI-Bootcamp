@@ -16,8 +16,8 @@ class TextAnalyst():
             words_li = file.read().splitlines()
             words = ''.join(words_li)
         
-        object = cls(words)
-        return object
+        return cls(words)
+         
     
     def show_freq(self, word):
         freq = 0
@@ -89,10 +89,11 @@ ta2 = TextAnalyst.from_file('the_stranger.txt')
 ta1.show_freq("Good")
 print(ta1.most_common())
 print(ta1.unique())   
+print(ta2.most_common())
+# ta2.show_freq("The")
+# print(ta2.unique())
 
-print(ta2.unique())
-
-tm = TextModification("am I? on, or with! the phone.")
-print(tm.wo_specs())
-print(tm.wo_stop_words())
-print(tm.wo_punct())
+# tm = TextModification("am I? on, or with! the phone.")
+# print(tm.wo_specs())
+# print(tm.wo_stop_words())
+# print(tm.wo_punct())

@@ -1,0 +1,16 @@
+from pyowm.owm import OWM
+owm = OWM('91162d31c7f79579eac79dda7e69099d')
+reg = owm.city_id_registry()
+weather_mgr = owm.weather_manager()
+observation = weather_mgr.weather_at_place('Tel aviv,IL')
+weather = observation.weather
+print()
+print(weather)
+temp_dict_celsius = weather.temperature('celsius')
+print(temp_dict_celsius)
+wind_dict_in_meters_per_sec = observation.weather.wind()
+print(wind_dict_in_meters_per_sec)
+sunrise_date = weather.sunrise_time(timeformat='date')
+print(sunrise_date)
+sunrset_date = weather.sunset_time(timeformat='date')
+print(sunrset_date)

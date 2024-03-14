@@ -13,7 +13,7 @@ class TextAnalyst():
         full_name = dir_path + "/" + name
         
         with open(full_name, 'r') as file:
-            words_li = file.read().split("/n")
+            words_li = file.read().splitlines()
             words = ''.join(words_li)
         
         object = cls(words)

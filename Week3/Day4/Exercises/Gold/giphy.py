@@ -1,7 +1,7 @@
 import requests
 import json
 
-q = "hilarious"
+q = "funny"
 rating = "g"
 api_key = "hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My"
 starter = "https://api.giphy.com/v1/gifs/search?"

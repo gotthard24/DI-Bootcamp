@@ -6,6 +6,7 @@ import dk
 API_KEY = '91162d31c7f79579eac79dda7e69099d'
 owm = OWM(API_KEY)
 weather_mgr = owm.weather_manager()
+# reg = owm.city_id_registry()
 
 with open("Week3\Day5\WeatherApp\city.list.json", "r", encoding="utf-8") as file:
     id_list = json.load(file)

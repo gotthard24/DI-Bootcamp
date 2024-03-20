@@ -15,7 +15,7 @@ def is_valid_str(var):
     while True:
         try:
             if re.match(r'[A-Za-z]', var):               
-                return var
+                return var.capitalize()
         except ValueError:
             print("It's not a valid string. Please try again")
             var = input("Enter the string:\n>  ")

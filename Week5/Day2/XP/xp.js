@@ -61,6 +61,13 @@
 //     }
 // }
 
+// do
+// {
+//     userInput = prompt("Please enter a number:");
+// }
+// while (isNaN(parseInt(userInput)) || userInput < 10)
+
+
 // // Exercise 4
 // const building = {
 //     numberOfFloors: 4,

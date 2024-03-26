@@ -113,7 +113,7 @@
 
 // for (let key in family) 
 // {
-//     console.log(key + ': ' + family[key]);
+//     console.log(key + ': ' + family[key])
 // }
 
 // //Exercise 6

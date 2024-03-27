@@ -159,7 +159,7 @@
 
 // container.style.backgroundColor = 'lightblue'
 // container.style.padding = '20px'
-// li5.style.display = 'none'
+// li5.style.visibility = 'hidden'
 // li2.style.border = '1px solid black'
 // body.style.fontSize = '24px'
 
@@ -177,44 +177,44 @@
 // console.log(myList.lastElementChild.textContent)
 
 // // Exercise 7 : My Book List
-// let listBooks = document.createElement('section')
-// let body = document.getElementsByTagName('body')[0]
+let listBooks = document.createElement('section')
+let body = document.getElementsByTagName('body')[0]
 
-// let lotr ={
-//     title : 'Lord of The Rings: The Fellowship of the Ring',
-//     author : 'J.R.R. Tolkien',
-//     image : 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg',
-//     alreadyRead : true
-// }
-// let the1984 ={
-//     title : '1984',
-//     author : 'George Orwell',
-//     image : 'https://m.media-amazon.com/images/I/612ADI+BVlL._AC_UF1000,1000_QL80_.jpg',
-//     alreadyRead : true
-// }
+let lotr ={
+    title : 'Lord of The Rings: The Fellowship of the Ring',
+    author : 'J.R.R. Tolkien',
+    image : 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg',
+    alreadyRead : true
+}
+let the1984 ={
+    title : '1984',
+    author : 'George Orwell',
+    image : 'https://m.media-amazon.com/images/I/612ADI+BVlL._AC_UF1000,1000_QL80_.jpg',
+    alreadyRead : true
+}
 
-// let allBooks = [lotr,the1984]
-// listBooks.setAttribute('class', 'listBooks')
-// body.appendChild(listBooks)
+let allBooks = [lotr,the1984]
+listBooks.setAttribute('class', 'listBooks')
+body.appendChild(listBooks)
 
-// for (let book of allBooks){
-//     let newDiv = document.createElement('div')
-//     listBooks.appendChild(newDiv)
-//     //title and author part
-//     for(let key in book){
-//         if (key === 'image')
-//             break
-//         let newP = document.createElement('p')
-//         newP.textContent = `${key} : ${book[key]}`
-//         newDiv.appendChild(newP)
-//         console.log(key + ': ' + book[key])
-//     }
-//     //image part
-//     let image = document.createElement('img')
-//     image.src = book['image']
-//     image.style.width = '100px'
-//     newDiv.appendChild(image)
-//     //isRead part
-//     if (book['alreadyRead'] === true)
-//         newDiv.style.color = 'red'
-// }
+for (let book of allBooks){
+    let newDiv = document.createElement('div')
+    listBooks.appendChild(newDiv)
+    //title and author part
+    for(let key in book){
+        if (key === 'image')
+            break
+        let newP = document.createElement('p')
+        newP.textContent = `${key} : ${book[key]}`
+        newDiv.appendChild(newP)
+        console.log(key + ': ' + book[key])
+    }
+    //image part
+    let image = document.createElement('img')
+    image.src = book['image']
+    image.style.width = '100px'
+    newDiv.appendChild(image)
+    //isRead part
+    if (book['alreadyRead'] === true)
+        newDiv.style.color = 'red'
+}

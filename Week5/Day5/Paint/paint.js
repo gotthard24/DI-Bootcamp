@@ -27,9 +27,7 @@ const colorCodes = [
     "#800000", // Maroon
     "#808000", // Olive
     "#000080", // Navy
-    "#008080", // Teal
-    "#00FFFF", // Aqua
-    "#FF00FF"  // Fuchsia
+    "#008080" // Teal
 ]
 
 body.style.margin = '0px auto'
@@ -79,6 +77,9 @@ board.style.display = 'grid'
 board.addEventListener('mousedown', mouseDownHandler)
 board.addEventListener('mousemove', mouseMoveHandler)
 board.addEventListener('mouseup', mouseUpHandler)
+
+body.addEventListener('mousedown', mouseDownHandler)
+body.addEventListener('mouseup', mouseUpHandler)
 
 createPallette(colorCodes)
 createBoard(boardSize)

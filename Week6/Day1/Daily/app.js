@@ -17,8 +17,8 @@ const displayGroceries = (groceries) => {
 };
 
 const cloneGroceries = () => {
-    let name = client
-    let shopping = {...groceries}
+    let name = client;
+    let shopping = {...groceries};
     shopping.totalPrice = '35$'
     shopping.other.paid = false
     return shopping

@@ -57,10 +57,10 @@
 
 // console.log(omgArr);
 
-// // Exercise 5 : Star Wars
+// Exercise 5 : Star Wars
 // const epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
 
-// const epicPhrase = epic.reduce((first, next) => first + ' ' + next);
+// const epicPhrase = epic.reduce((result, next) => result + ' ' + next);
 
 // console.log(epicPhrase);
 // Exercise 6 : Employees #2

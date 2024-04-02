@@ -39,11 +39,11 @@ let videosData = [
 let videos = []
 
 videosData.forEach((item, index) => {
-    let videoName = `video${index}`
+    // let videoName = `video${index}`
     let video = new Video(item.title, item.uploader, item.time);
     video.watch()
-    // videos.push(video)
-    videos[videoName] = video
+    videos.push(video)
+    // videos[videoName] = video
 });
 
 console.log(videos);

@@ -65,11 +65,11 @@
 // console.log(epicPhrase);
 // Exercise 6 : Employees #2
 
-const students = [{name: "Ray", course: "Computer Science", isPassed: true}, 
-               {name: "Liam", course: "Computer Science", isPassed: false}, 
-               {name: "Jenner", course: "Information Technology", isPassed: true}, 
-               {name: "Marco", course: "Robotics", isPassed: true}, 
-               {name: "Kimberly", course: "Artificial Intelligence", isPassed: false}, 
-               {name: "Jamie", course: "Big Data", isPassed: false}];
+// const students = [{name: "Ray", course: "Computer Science", isPassed: true}, 
+//                {name: "Liam", course: "Computer Science", isPassed: false}, 
+//                {name: "Jenner", course: "Information Technology", isPassed: true}, 
+//                {name: "Marco", course: "Robotics", isPassed: true}, 
+//                {name: "Kimberly", course: "Artificial Intelligence", isPassed: false}, 
+//                {name: "Jamie", course: "Big Data", isPassed: false}];
 
-let passedArr = students.filter(item => item.isPassed === true).forEach(item => console.log(`Congrats ${item.name} with passing the exams of ${item.course}`))
+// let passedArr = students.filter(item => item.isPassed === true).forEach(item => console.log(`Congrats ${item.name} with passing the exams of ${item.course}`))

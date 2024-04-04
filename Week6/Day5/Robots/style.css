@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Sleep Baby', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('BGs/BG.png');
+    background-repeat: repeat;
+    background-size: contain;
+    background-color: rgba(70, 91, 255, 0.26);
+}
+
+h1{
+    margin-left: 3%;
+    margin-right: 5%;
+    font-family: 'SEGA LOGO FONT', sans-serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    margin-bottom: 2%;
+    background-color: rgba(92, 255, 116, 0.629);
+}
+
+#search{
+    border: 0px;
+    width: 200%;
+    height: 5vh;
+}
+
+#board{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10%;
+    width: 90vw;
+    height: 100vh;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 50%;
+    background-image: url('BGs/cardBG.png');
+    background-color: rgb(191, 250, 255);
+    border-radius: 15px;
+}
+
+.frame{
+    margin-bottom: 5%;
+    width: 70%;
+    height: 60%;
+    background-color: rgb(129, 129, 129);
+    border-radius: 50%;
+}

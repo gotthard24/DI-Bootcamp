@@ -3,7 +3,7 @@ async function submitHandler(event){
     const root = document.getElementById('root')
     const api_key = 'hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My';
     const rating = 'g';
-    const url = `https://api.giphy.com/v1/gifs/random?rating=${rating}&tag=${event.target.tag}&api_key=${api_key}`;
+    const url = `https://api.giphy.com/v1/gifs/random?rating=${rating}&tag=${event.target.tag.value}&api_key=${api_key}`;
     
     try {
         let response = await fetch(url);

@@ -7,6 +7,12 @@
     <script defer src="app.js"></script>
 </head>
 <body>
-    
+    <form onsubmit="submitHandler(event)">
+        City 1<input type="text" name="lat1" placeholder="latitude" value="48.864716" required>
+        <input type="text" name="lon1" placeholder="longitude" value="2.349014" required><br>
+        City 2<input type="text" name="lat2" placeholder="latitude" value="40.730610" required>
+        <input type="text" name="lon2" placeholder="longitude" value="-73.935242" required><br>
+        <button type="submit">FIND</button>
+    </form>
 </body>
 </html>

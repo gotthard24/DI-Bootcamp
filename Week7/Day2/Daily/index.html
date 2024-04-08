@@ -7,6 +7,13 @@
     <script defer src="app.js"></script>
 </head>
 <body>
-    
+    <form onsubmit='submitHandler(event)' onreset="deleteAll(event)">
+        <input type="text" name="tag" placeholder="Category">
+        <button type="submit">SEARCH</button>
+        <button type="reset">DELETE ALL</button>
+    </form>
+    <section id="root">
+        
+    </section>
 </body>
 </html>

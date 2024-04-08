@@ -106,7 +106,7 @@ function toMorse(morseJS) {
     return new Promise((res, rej) => {
         const userInput = prompt("Enter something").toLowerCase();
         const chars = userInput.split('');
-        const uniqueElements = chars.filter(element => !morseJS[element]);
+        const uniqueElements = chars.filter(element => !morseJS[element] && element !== ' ');
 
         if (uniqueElements.length > 0) {
             rej('Unknown symbols detected');

@@ -1,19 +1,80 @@
+*{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 body{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+h1{
+    margin-top: 5%;
+    font-weight: 800;
+    font-size: 40px;
+}
+
+p{
+    font-weight: 600;
+}
+
+span{
+    font-weight: 600;
+}
+
 #root{
-    width: 100vw;
-    height: 50vh;
+    position: relative;
+    padding-bottom: 20px;
+    width: 60vw;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: wheat;
+    border-radius: 40px;
+    margin: 40px;
+    padding: 20px;
+    background: linear-gradient(to right, wheat, rgb(149, 248, 127));
 }
 
 .field{
     margin: 2%;
+    width: 30vw;
+    height: 4vh;
+    border: 0px;
+    border-radius: 20px;
+    padding-left: 5px;
+}
+
+#resultfield{
+    width: 22.5vw;
+    margin-bottom: 20px;
+}
+#swapbtn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 70%;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.486);
+    border-radius: 50%;
+    border: none;
+}
+#swapimg{
+    width: 40px;
+}
+
+#convertbtn{
+    margin-left: 25%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.486);
+    border: 0px;
+    border-radius: 15px;
+    width: 10vw;
+    height: 4vh;
+}
+
+#form{
+    margin-left: 20%;
 }

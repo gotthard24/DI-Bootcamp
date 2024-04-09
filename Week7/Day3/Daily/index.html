@@ -6,18 +6,21 @@
     <title>Converter</title>
     <script defer src="app.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <section id="root">
         <h1>Converter</h1>
-        <form onsubmit="convert(event)">
+        <form id="form" onsubmit="convert(event)">
             <p>Currency 1</p>
             <select name="currency1" id="curr1" class="field"></select>
+            <button onclick="swap()" id="swapbtn"><img id="swapimg" src="https://github.com/devtlv/studentsGitHub/blob/master/Images%20cours%20%C3%A0%20h%C3%A9berger%20-%2006.03.2024/Week%207%20-%20Adv%20&%20Asynchronous%20Javascript/W7D5/148588337-233540b7-aac6-4b25-bbf4-520765380f59.png?raw=true" alt=""></button>
             <p>Currency 2</p>
             <select name="currency2" id="curr2" class="field"></select> <br>
+            <p>Amount</p>
             <input type="text" name="amount" class="field">
-            <button type="submit" >Convert</button> <br>
-            Result<input type="text" name="result" class="field" readonly>
+            <button type="submit" id="convertbtn">Convert</button> <br>
+            <span>Result</span><input type="text" name="result" class="field" id="resultfield" readonly>
         </form>
     </section>
 </body>

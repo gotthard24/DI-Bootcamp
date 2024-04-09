@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Converter</title>
     <script defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <section id="root">
+        <h1>Converter</h1>
+        <form onsubmit="convert(event)">
+            <p>Currency 1</p>
+            <select name="currency1" id="curr1" class="field"></select>
+            <p>Currency 2</p>
+            <select name="currency2" id="curr2" class="field"></select> <br>
+            <input type="text" name="amount" class="field">
+            <button type="submit" >Convert</button> <br>
+            Result<input type="text" name="result" class="field" readonly>
+        </form>
+    </section>
 </body>
 </html>

@@ -22,35 +22,35 @@
 // })
 
 
-const getX = () =>{
-    return new Promise((res,rej) =>{
-        setTimeout(()=>{
-            res(5);
-        }, 3000);
-    });
-};
+// const getX = () =>{
+//     return new Promise((res,rej) =>{
+//         setTimeout(()=>{
+//             res(5);
+//         }, 3000);
+//     });
+// };
 
-const getY = () =>{
-    return new Promise((res,rej) =>{
-        setTimeout(()=>{
-            res(6);
-        }, 2000);
-    });
-};
+// const getY = () =>{
+//     return new Promise((res,rej) =>{
+//         setTimeout(()=>{
+//             res(6);
+//         }, 2000);
+//     });
+// };
 
-const getXY = () =>{
-    getX().then(x => {
-        getY().then(y => {
-          displaySum(x, y)
-        })
-    })
-}
+// const getXY = () =>{
+//     getX().then(x => {
+//         getY().then(y => {
+//           displaySum(x, y)
+//         })
+//     })
+// }
 
 
-const displaySum = (x, y) => {
-    console.log(x + y);
-}
-getXY();
+// const displaySum = (x, y) => {
+//     console.log(x + y);
+// }
+// getXY();
 
 /**
 const arr = [

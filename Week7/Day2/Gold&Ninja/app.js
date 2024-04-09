@@ -7,16 +7,16 @@ async function submitHandler(event){
         let response = await Promise.all([fetch(url1), fetch(url2)]);
         let responseData = await Promise.all(response.map(res => res.json()));
 
-        console.log(typeof(response));
-        console.log(response);
-        console.log(typeof(responseData));
+        // console.log(typeof(response));
+        // console.log(response);
+        // console.log(typeof(responseData));
         console.log(responseData);
-        console.log('Paris');
-        console.log(responseData[0].results.sunrise);
-        console.log(responseData[0].results.sunset);
-        console.log('New York');
-        console.log(responseData[1].results.sunrise);
-        console.log(responseData[1].results.sunset);
+        // console.log('Paris');
+        // console.log(responseData[0].results.sunrise);
+        // console.log(responseData[0].results.sunset);
+        // console.log('New York');
+        // console.log(responseData[1].results.sunrise);
+        // console.log(responseData[1].results.sunset);
     } catch (error) {
         console.error('Error:', error);
     }

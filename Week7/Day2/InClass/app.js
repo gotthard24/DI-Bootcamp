@@ -63,20 +63,25 @@
 nums = [0,0,1,1,1,2,2,2,3,3,3,4]
 
 function deleteDupls(nums) {
-    let length = nums.length
-    let current = nums[0]
-    let duplInRow = 0
+    let count = 0;
+    let prev = nums[0];
 
-    for(i=1; i<length; i++){
-        if (duplInRow > 1){
-            duplInRow = 0
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] === prev) {
+            count++;
+            if (count > 1) {
+                nums.splice(i, 1); 
+                i--; 
+            }
+        } else {
+            count = 0; 
+            prev = nums[i]; 
         }
-        else if (nums[i] === current){
-            duplInRow++
-        }
-        current = nums[i]
     }
 }
+
+deleteDupls(nums)
+console.log(nums);
 // let post = {
 //     userId: 6,
 //     title: 'my title',
@@ -110,35 +115,35 @@ function deleteDupls(nums) {
 //         body: JSON.stringify(post)
 //     }
 
-function addMe(event) {
-    event.preventDefault()
-    const name = event.target.name.value
-    const username = event.target.username.value
-    const email = event.target.email.value
-    postUser(name,username,email)
-}
+// function addMe(event) {
+//     event.preventDefault()
+//     const name = event.target.name.value
+//     const username = event.target.username.value
+//     const email = event.target.email.value
+//     postUser(name,username,email)
+// }
 
-async function postUser(name,username,email) {
-    let url = 'https://users-18kl.onrender.com/userjson'
-    let options = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({name,username,email})
-    }
-    try {
-        const resolve = await fetch(url, options)
-        const data = await resolve.json()
-        let html = data.map((item) => {
-            return `<div>${item.name}</div>`
-        })
-        document.getElementById('root').innerHTML = html.join('')
-        console.log(data);
-    } catch (error) {
-        console.log(error);
-    }
-}
+// async function postUser(name,username,email) {
+//     let url = 'https://users-18kl.onrender.com/userjson'
+//     let options = {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({name,username,email})
+//     }
+//     try {
+//         const resolve = await fetch(url, options)
+//         const data = await resolve.json()
+//         let html = data.map((item) => {
+//             return `<div>${item.name}</div>`
+//         })
+//         document.getElementById('root').innerHTML = html.join('')
+//         console.log(data);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
 
 // fetch(url,options)

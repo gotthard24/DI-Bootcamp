@@ -7,7 +7,7 @@ async function convert(event) {
     // let curr2 = document.forms[0].currency2.value.slice(0,3)
     // let amount = document.forms[0].amount.value
 
-    const api_key = '28b90b480c65969a8af17862'
+    const api_key = '0648199bc57bdafaaeabe6df'
     const url = `https://v6.exchangerate-api.com/v6/${api_key}/latest/USD/`
 
     let data = await getData(url)
@@ -57,7 +57,7 @@ async function getData(url) {
 }
 
 async function addToSelect() {
-    const api_key = '28b90b480c65969a8af17862'
+    const api_key = '0648199bc57bdafaaeabe6df'
     const url = `https://v6.exchangerate-api.com/v6/${api_key}/codes`
 
     let currChoice1 = document.getElementById('curr1')

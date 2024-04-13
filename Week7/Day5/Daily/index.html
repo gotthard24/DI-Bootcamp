@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="guess.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Score: <span id="score">0</span></h1>
+    <button onclick="start(event)" id="startbtn">Start</button>
+    <section id="output"></section>
+    <form id="question" action="" style="display: none;">
+        <button id="option1" onclick="check(event)"></button>
+        <button id="option2" onclick="check(event)"></button><br>
+        <button id="option3" onclick="check(event)"></button>
+        <button id="option4" onclick="check(event)"></button>
+    </form>
+    <button onclick="next(event)" id="nextbtn" style="display: none;">Next Question</button>
+</body>
+</html>

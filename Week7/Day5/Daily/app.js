@@ -25,3 +25,12 @@ app.get('/emojis', (req, res) => {
         res.status(500).json({ error: 'Failed to fetch emojis' });
     }
 });
+
+// app.post('/emojis', (req, res) => {
+//     const {guess, name} = req.body
+//     if(guess = name){
+//         console.log('Right');
+//     } else {
+//         console.log('Wrong');
+//     }
+// });

@@ -48,6 +48,9 @@ function start(event) {
 
 function check(event){
     event.preventDefault()
+    // let guess = event.target.textContent
+    // let name = emojis[currentQ].name
+
     if(event.target.textContent === emojis[currentQ].name){
         document.getElementById('score').textContent = ++score
         document.getElementById('output').innerHTML += 'Good Job'
@@ -61,6 +64,17 @@ function check(event){
         document.getElementById('output').innerHTML = '<h1>THE END</h1>'
     }
     document.getElementById('question').style.display = 'none'
+
+    // fetch('http://localhost:7777/emojis',{
+    //     method: "POST",
+    //     headers:{
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({name, guess})
+    // })
+    //     .then(res => res.json())
+    //     .then(data => console.log(data))
+    //     .catch(err => console.log(err))
 }
 
 function next(event) {

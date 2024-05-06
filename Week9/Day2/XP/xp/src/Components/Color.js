@@ -5,6 +5,7 @@ const Color = () => {
 
     useEffect(() =>{
         alert('useEffect reached')
+        setFavoriteColor('yellow')
       }, [])
 
     const changeColor = () =>{

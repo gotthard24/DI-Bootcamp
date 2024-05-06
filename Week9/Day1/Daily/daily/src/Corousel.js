@@ -21,7 +21,7 @@ class DemoCarousel extends Component {
                 </div>
                 <div>
                     <img src="..\assets\las_vegas.webp" />
-                    <p className="legend">Legend 3</p>
+                    <p className="legend">Legend 4</p>
                 </div>
             </Carousel>
         );

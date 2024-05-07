@@ -15,6 +15,7 @@ const InfoForm = () => {
             ...formData,
             [name]: value
         });
+        setSubmittedData(formData);
     };
 
     const handleSubmit = (e) => {

@@ -26,8 +26,6 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  align-items: center;
-  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -67,12 +65,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
-
-#quoteframe {
-  margin: 20px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.932);
-  color: black;
-  border-radius: 20px;
 }

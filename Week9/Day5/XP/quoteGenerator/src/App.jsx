@@ -12,7 +12,7 @@ const App = () => {
     return (
         <div>
             <QuoteGenerator key={key} />
-            <NewQuoteButton onClick={generateNewQuote} />
+            {/* <NewQuoteButton onClick={generateNewQuote} /> */}
         </div>
     );
 }

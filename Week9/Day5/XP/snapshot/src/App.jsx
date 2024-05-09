@@ -1,35 +1,69 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import {createBrowserRouter,RouterProvider, Outlet} from "react-router-dom";
+import Nav from './components/Nav';
+import Photoes from './components/Photoes';
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+const Root = () => {
+  return(
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Nav/>
+      <Outlet/>
     </>
   )
 }
 
-export default App
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element:<Root/>,
+    errorElement: <h2>Oops Smth Went Wrong!</h2>,
+    children:[
+      {
+        path: '/mountain',
+        element: <>
+          <Photoes category={'mountain'}/>
+        </>
+      },
+      {
+        path: '/forest',
+        element: <>
+          <Photoes category={'forest'}/>
+        </>
+      },
+      {
+        path: '/dog',
+        element: <>
+          <Photoes category={'dog'}/>
+        </>
+      },
+      {
+        path: '/parrot',
+        element: <>
+          <Photoes category={'parrot'}/>
+        </>
+      },
+      {
+        path: '/search/:category',
+        element: <>
+            <Photoes category={'search'} />
+          </>
+      },
+      {
+        path: '/search/',
+        element: <>
+            <Photoes category={'search'} />
+          </>
+      },
+    ]
+  }
+])
+
+function App() {
+  return (
+    <>
+      <RouterProvider router={router}/>
+    </>
+  );
+}
+
+export default App;

@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 
 const Photoes = ({ category }) => {
     const [photoList, setPhotoList] = useState([]);
+    const params = useParams()
+    console.log(params);
 
     useEffect(() => {
         if (category) {
@@ -12,11 +14,12 @@ const Photoes = ({ category }) => {
             console.log(query);
 
             if(query === 'search'){
-
+                query = params.category
             }
             
             client.photos.search({ query, per_page: 4 })
                 .then(photos => {
+                    console.log(params);
                     setPhotoList(photos.photos);
                 })
                 .catch(error => {
@@ -31,7 +34,7 @@ const Photoes = ({ category }) => {
 
     return (
         <>
-            <h1>Photos</h1>
+            <h1>Photos of {params.category ? params.category : category}</h1>
             <div>
                 {photoList.map((photo, index) => (
                     <img key={index} src={photo.src.medium} alt={`Photo ${index}`} />

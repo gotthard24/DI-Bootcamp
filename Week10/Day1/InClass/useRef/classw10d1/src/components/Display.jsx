@@ -9,6 +9,7 @@ const Display = (props)=>{
     return(
         <>
             <h2>Display</h2>
+            <h2>UseRef</h2>
             <DisplayContext.Provider value={{title, setTitle}}>
                 <ShowCounter/>
                 <Title/>

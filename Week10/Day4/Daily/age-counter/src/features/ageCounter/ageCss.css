@@ -4,6 +4,6 @@
 }
 
 .spinner {
-    display: inline-block; /* Ensure the element can be animated */
-    animation: spin 2.5s linear infinite; /* Apply the spin animation */
+    display: inline-block; 
+    animation: spin 2.5s linear infinite; 
 }

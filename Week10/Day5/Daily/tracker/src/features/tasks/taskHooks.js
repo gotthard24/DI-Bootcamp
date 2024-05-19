@@ -11,3 +11,8 @@ export const useCategories = (val) => {
     const cats = createSelector(state, (state) => state.categories.map(cat => cat))
     return useSelector(cats)
 }
+
+export const useAllTasks = () =>{
+    const tasks = createSelector(state, (state)=> state.tasks.map(task => task))
+    return useSelector(tasks)
+}

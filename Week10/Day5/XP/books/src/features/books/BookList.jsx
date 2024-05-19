@@ -1,11 +1,9 @@
 import { useState } from "react"
-import { useFiction, useHorror, useFantasy } from "./bookHooks"
+import { useFiction, } from "./bookHooks"
 
 const BookList = (props) => {
     const [genre, setGenre] = useState('Fiction')
-    const fiction = useFiction()
-    const horror = useHorror()
-    const fantasy = useFantasy()
+    const books = useFiction(genre)
 
     return(
         <div>
@@ -14,25 +12,13 @@ const BookList = (props) => {
                 <option value="Fantasy">Fantasy</option>
                 <option value="Horror">Horror</option>
             </select>    
-            {genre ==='Fiction' ? fiction.map(book => {
+            {books.map(book => {
                 return(
                     <div key={book.id}>
                         <p>{book.title}</p>
                     </div>
                 )
-            }) : genre === 'Fantasy' ? fantasy.map(book =>{
-                return(
-                    <div key={book.id}>
-                        <p>{book.title}</p>
-                    </div>
-                )
-            }) : horror.map(book =>{
-                return(
-                    <div key={book.id}>
-                        <p>{book.title}</p>
-                    </div>
-                )
-            })}        
+            })}
         </div>
     )
 }

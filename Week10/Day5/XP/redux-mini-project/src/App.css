@@ -1,0 +1,83 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* General post container */
+.post {
+  border: 1px solid #ddd;  /* Border around each post */
+  border-radius: 8px;      /* Rounded corners */
+  padding: 16px;           /* Padding inside the post */
+  margin-bottom: 20px;     /* Space between posts */
+  background-color: #fff;  /* White background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+}
+
+/* Post title styling */
+.post-title {
+  font-size: 1.5em;        /* Larger font for titles */
+  margin-bottom: 10px;     /* Space below the title */
+  color: #333;             /* Dark gray color for the title */
+  border-bottom: 1px solid #eee; /* Light gray border below the title */
+  padding-bottom: 8px;     /* Padding below the title */
+}
+
+/* Post content styling */
+.post-content {
+  font-size: 1em;          /* Normal font size for content */
+  line-height: 1.6;        /* Line height for better readability */
+  color: #555;             /* Medium gray color for content */
+}
+
+/* Additional styling for links within the post content */
+.post-content a {
+  color: #007bff;          /* Blue color for links */
+  text-decoration: none;   /* No underline */
+}
+
+.post-content a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.emojis{
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 10px;
+}

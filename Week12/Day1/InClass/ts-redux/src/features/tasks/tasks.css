@@ -1,0 +1,4 @@
+.completed {
+    text-decoration: line-through;
+    color: rgb(141, 254, 54);
+}
